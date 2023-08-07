@@ -47,8 +47,8 @@ resource "aws_route53_record" "record" {
   type = "A"
   ttl = 30
   records = [lookup(aws_instance.instance, each.key[""] ]
-}
+    }
 
-output "instances" {
+    output "instances" {
       value = aws_instance.instance
     }
